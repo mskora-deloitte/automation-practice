@@ -12,4 +12,23 @@ export class MainPage {
     cy.get('.shopping_cart').contains("Cart").click();
   }
 
+  static clickSignIn() {
+    cy.get('.login').click();
+  }
+
+  static addItemToCart(itemIndex) {
+    cy.get(`#homefeatured > :nth-child(${itemIndex})`).contains("Add to cart").click();
+    let price = Cypress.$(`#homefeatured > :nth-child(${itemIndex}) .price`);
+    cy.wait(6000)
+    cy.contains("Continue shopping").click();
+    return price[0].innerText.trim();
+  }
+
+
+  static addItemToCartAndProceedToCheckout(itemIndex) {
+    cy.get(`#homefeatured > :nth-child(${itemIndex})`).contains("Add to cart").click();
+    let price = Cypress.$(`#homefeatured > :nth-child(${itemIndex}) .price`);
+    cy.contains("Proceed to checkout").click();
+    return price[0].innerText.trim();
+  }
 }
