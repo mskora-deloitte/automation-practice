@@ -19,7 +19,7 @@ export class MainPage {
   static addItemToCart(itemIndex) {
     cy.get(`#homefeatured > :nth-child(${itemIndex})`).contains("Add to cart").click();
     let price = Cypress.$(`#homefeatured > :nth-child(${itemIndex}) .price`);
-    cy.wait(6000)
+    cy.wait(3000)
     cy.contains("Continue shopping").click();
     return price[0].innerText.trim();
   }
@@ -30,5 +30,9 @@ export class MainPage {
     let price = Cypress.$(`#homefeatured > :nth-child(${itemIndex}) .price`);
     cy.contains("Proceed to checkout").click();
     return price[0].innerText.trim();
+  }
+
+  static proceedToCheckout() {
+    cy.get('[title="View my shopping cart"]').click();
   }
 }
