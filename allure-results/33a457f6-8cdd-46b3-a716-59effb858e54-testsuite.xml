@@ -1,0 +1,15 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1659375395944' stop='1659375396126'>
+    <name>Cypress.env()</name>
+    <title>Cypress.env()</title>
+    <test-cases>
+        <test-case start='1659375395944' status='passed' stop='1659375396113'>
+            <name>Get environment variables</name>
+            <title>Get environment variables</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

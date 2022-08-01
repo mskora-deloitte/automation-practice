@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1659375484696' stop='1659375491565'>
+    <name>Waiting</name>
+    <title>Waiting</title>
+    <test-cases>
+        <test-case start='1659375484696' status='passed' stop='1659375490909'>
+            <name>cy.wait() - wait for a specific amount of time</name>
+            <title>cy.wait() - wait for a specific amount of time</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1659375490940' status='passed' stop='1659375491565'>
+            <name>cy.wait() - wait for a specific route</name>
+            <title>cy.wait() - wait for a specific route</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
