@@ -15,7 +15,7 @@ context('e-shop', function() {
 
     users.forEach((user) => {
 
-      it.skip('should sign in to ' + user.name + ' account', function() {
+      it('should sign in to ' + user.name + ' account', function() {
         MainPage.clickSignIn();
         SignInPage.typeEmail(user.email);
         SignInPage.typePassword(user.password);
@@ -24,7 +24,7 @@ context('e-shop', function() {
       });
     });
 
-    it.skip('should add products to cart', () => {
+    it('should add products to cart', () => {
       const firstProductName = "Blouse";
       const secondProductName = "Faded Short Sleeve T-shirts"
       const firstProductPrice = MainPage.getItemPrice(firstProductName);
