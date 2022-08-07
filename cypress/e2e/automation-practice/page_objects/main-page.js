@@ -59,8 +59,8 @@ export class MainPage {
   static addProductsToCart(products) {
     let prices = [];
     products.forEach((product) => {
-      prices.push(MainPage.getItemPrice(product.id));
-      MainPage.addItemToCart(product.id);
+      prices.push(MainPage.getItemPrice(product.name));
+      MainPage.addItemToCart(product.name);
     });
     return prices;
   };

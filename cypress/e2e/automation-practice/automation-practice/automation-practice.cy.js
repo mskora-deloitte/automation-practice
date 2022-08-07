@@ -24,18 +24,12 @@ context('e-shop', function() {
       });
     });
 
-    it('should add products to cart', () => {
-      // const firstProductIndex = 2;
-      // const secondProductIndex = 1;
+    it.skip('should add products to cart', () => {
       const firstProductName = "Blouse";
       const secondProductName = "Faded Short Sleeve T-shirts"
-      // const firstProductPrice = MainPage.getItemPrice(firstProductIndex);
       const firstProductPrice = MainPage.getItemPrice(firstProductName);
-      // MainPage.addItemToCart(firstProductIndex);
       MainPage.addItemToCart(firstProductName);
-      // const secondProductPrice = MainPage.getItemPrice(secondProductIndex);
       const secondProductPrice = MainPage.getItemPrice(secondProductName);
-      // MainPage.addItemToCart(secondProductIndex);
       MainPage.addItemToCart(secondProductName);
       MainPage.proceedToCheckout();
       CheckoutPage.assertItemPrice(firstProductName, firstProductPrice);
@@ -45,16 +39,11 @@ context('e-shop', function() {
       CheckoutPage.assertTotalPrice(totalPrice);
     });
 
-    it.skip('should add products from json to cart', () => {
+    it('should add products from json to cart', () => {
       let prices = [];
       prices = MainPage.addProductsToCart(products);
       MainPage.proceedToCheckout();
-      let totalPrice = 0;
-      for(let i = 0; i < prices.length; i++) {
-        CheckoutPage.assertItemPrice(i + 1, prices[i]);
-        totalPrice += Number(prices[i].substring(1));
-      }
-      totalPrice = "$" + totalPrice.toFixed(2);
+      let totalPrice = CheckoutPage.assertProductsPrices(products, prices);
       CheckoutPage.assertTotalPrice(totalPrice);
     });
   });
