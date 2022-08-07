@@ -1,4 +1,14 @@
 {
-    "email": "mskora@deloittece.com",
-    "password": "Cypress"
+    "users": [  
+        {
+            "email": "mskora@deloittece.com",
+            "password": "Cypress",
+            "name": "Miłosz Skóra"
+        },
+        {
+            "email": "testing.test@test.com",
+            "password": "password123_test",
+            "name": "TEST TEST"
+        }
+    ]
 }

@@ -11,4 +11,10 @@ export class SignInPage {
   static clickSignIn() {
     cy.get("#SubmitLogin").click();
   }
+
+  static checkIfLoggedInCorrectly(name) {
+    cy.get(".account span")
+      .invoke("text")
+      .should("eq", name);
+  }
 }

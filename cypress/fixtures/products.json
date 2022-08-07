@@ -1,10 +1,12 @@
-[
+{
+    "products": [
         {
             "id": 2,
-            "name": "faded shirt"
+            "name": "Faded Short Sleeve T-shirts"
         },
         {
             "id": 1,
-            "name": "blouse"
+            "name": "Blouse"
         }
-]
+    ]
+}
